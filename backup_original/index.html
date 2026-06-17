@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>임민욱 | Video Vision & AI Engineer</title>
+    
+    <!-- SEO 메타 태그 -->
+    <meta name="description" content="영상 딥러닝 연구실 석사과정 임민욱의 포트폴리오 사이트입니다. 시맨틱 세그먼테이션, UWB 이종 센서 융합 및 모바일 AI 최적화 연구.">
+    <meta name="keywords" content="임민욱, minyook, 영상비전엔지니어, 컴퓨터비전, 시맨틱세그먼테이션, UWB, 딥러닝, PyTorch, Android, 해커톤수상">
+    <meta property="og:title" content="임민욱 | Video Vision & AI Engineer 포트폴리오">
+    <meta property="og:description" content="영상 딥러닝 연구 및 모바일 최적화 인지 시스템 개발자 임민욱의 포트폴리오">
+    <meta property="og:type" content="website">
+    
+    <!-- 구글 폰트 (Outfit & Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS 스타일시트 연결 -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Lucide 아이콘 CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- 0. 페이지 상단 스크롤 진행률 표시 바 (스크롤 정도 시각화) -->
+    <div class="scroll-progress-bar" id="scroll-progress"></div>
+    
+    <!-- 1. 마우스 반응형 커스텀 커서 -->
+    <div class="custom-cursor-dot" id="cursor-dot"></div>
+    <div class="custom-cursor-outline" id="cursor-outline"></div>
+
+    <!-- 2. 배경 효과: 그라데이션 오로라 광원 & 그리드 오버레이 -->
+    <div class="bg-grid"></div>
+    <div class="bg-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- 3. 헤더 및 네비게이션 바 -->
+    <header class="header">
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span>MIN</span>YOOK
+            </a>
+            
+            <nav class="nav" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#hero" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#awards" class="nav-link">Awards</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <!-- 테마 토글 버튼 (다크/라이트) -->
+                <button class="theme-toggle" id="theme-toggle" aria-label="테마 전환">
+                    <i data-lucide="moon" class="icon-moon"></i>
+                    <i data-lucide="sun" class="icon-sun"></i>
+                </button>
+                
+                <!-- 모바일 햄버거 토글 버튼 -->
+                <button class="menu-toggle" id="menu-toggle" aria-label="메뉴 열기">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 4. Hero 섹션 (메인 화면) -->
+    <section class="section hero" id="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="hero-subtitle reveal-up">VIDEO VISION & AI DEEP LEARNING ENGINEER</span>
+                <h1 class="hero-title reveal-up" style="transition-delay: 0.1s;">
+                    안녕하세요, 저는 <br>
+                    <span class="text-gradient dynamic-text">영상 비전 엔지니어</span> <br>
+                    개발자 <span class="text-name">임민욱</span>입니다.
+                </h1>
+                <p class="hero-desc reveal-up" style="transition-delay: 0.2s;">
+                    동의대학교 컴퓨터소프트웨어공학과 영상 딥러닝 연구실 석사과정생으로, 자율주행의 핵심인 시맨틱 세그먼테이션(Semantic Segmentation) 등 최신 컴퓨터 비전 기술을 깊이 있게 연구하고 있습니다.
+                </p>
+                <div class="hero-btns reveal-up" style="transition-delay: 0.3s;">
+                    <a href="#projects" class="btn btn-primary btn-magnetic">
+                        <span>프로젝트 보기</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-outline btn-magnetic">
+                        <span>연락하기</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- 마우스 스크롤 다운 안내 -->
+        <div class="scroll-down">
+            <div class="mouse-icon">
+                <span class="wheel"></span>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- 5. About 섹션 (자기소개 및 학력/경력) -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">ABOUT ME</span>
+                <h2 class="section-title">최적화된 AI 인지 시스템을 향한 연구</h2>
+            </div>
+            
+            <div class="about-grid">
+                <!-- 프로필 유리 카드 -->
+                <div class="about-card profile-card reveal-left">
+                    <div class="profile-img-container">
+                        <div class="profile-placeholder">
+                            <i data-lucide="scan-eye" class="profile-placeholder-icon"></i>
+                        </div>
+                    </div>
+                    <div class="profile-info">
+                        <h3>임민욱 (Min-yook Lim)</h3>
+                        <p>Video Vision Engineer</p>
+                        <div class="profile-meta">
+                            <div class="meta-item"><i data-lucide="mail"></i> <span>limminyuk0815@gmail.com</span></div>
+                            <div class="meta-item"><i data-lucide="phone"></i> <span>010-2470-8336</span></div>
+                            <div class="meta-item"><i data-lucide="map-pin"></i> <span>Busan, South Korea</span></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 소개 상세 글 및 타임라인 -->
+                <div class="about-details">
+                    <p class="about-text reveal-right">
+                        저는 단순한 카메라 기반 비전에 머무르지 않고, **UWB(초광대역 무선 기술) 등 이종 센서 데이터와의 융합(Sensor Fusion)**을 지향합니다. 모바일 환경에서 실시간으로 지연 없이 구동되는 최적화된 인공지능 인지 시스템 개발에 강점이 있습니다.
+                    </p>
+                    
+                    <!-- 학력 및 경력 타임라인 구조 추가 -->
+                    <div class="timeline-box reveal-right" style="margin-top: 30px; transition-delay: 0.1s;">
+                        <h4 style="font-size: 18px; margin-bottom: 20px; font-family: var(--font-heading); color: var(--primary); display: flex; align-items: center; gap: 8px;">
+                            <i data-lucide="graduation-cap"></i> 학력 & 연구 경력 (Timeline)
+                        </h4>
+                        <div class="timeline" style="border-left: 2px solid var(--border-color); padding-left: 20px; position: relative;">
+                            
+                            <!-- 석사 타임라인 -->
+                            <div class="timeline-item" style="margin-bottom: 24px; position: relative;">
+                                <div class="timeline-dot" style="position: absolute; left: -27px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background-color: var(--primary); border: 2px solid var(--bg-base);"></div>
+                                <span class="timeline-date" style="font-size: 12px; color: var(--secondary); font-weight: 600; display: block; margin-bottom: 4px;">2026.09 ~ 2028.02 (예정)</span>
+                                <strong class="timeline-title" style="font-size: 15px; color: var(--text-primary); display: block;">동의대학교 컴퓨터소프트웨어공학과 대학원</strong>
+                                <span class="timeline-desc" style="font-size: 13px; color: var(--text-secondary);">영상 딥러닝 연구실 석사과정 연구원</span>
+                            </div>
+                            
+                            <!-- 학부 타임라인 -->
+                            <div class="timeline-item" style="position: relative;">
+                                <div class="timeline-dot" style="position: absolute; left: -27px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background-color: var(--secondary); border: 2px solid var(--bg-base);"></div>
+                                <span class="timeline-date" style="font-size: 12px; color: var(--text-muted); font-weight: 600; display: block; margin-bottom: 4px;">2021.03 ~ 2026.08</span>
+                                <strong class="timeline-title" style="font-size: 15px; color: var(--text-primary); display: block;">동의대학교 컴퓨터소프트웨어공학과 학부</strong>
+                                <span class="timeline-desc" style="font-size: 13px; color: var(--text-secondary); display: block;">학점: 3.7 / 4.5 | 졸업 작품전 우수상 수상</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Projects 섹션 (포트폴리오 리스트) -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">MY WORKS</span>
+                <h2 class="section-title">대표 프로젝트</h2>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- 프로젝트 1: 스터디 신청 사이트 -->
+                <div class="project-card reveal-up">
+                    <div class="project-img-box">
+                        <div class="project-img-placeholder">
+                            <i data-lucide="globe"></i>
+                        </div>
+                        <div class="project-badge">Web Developer</div>
+                    </div>
+                    <div class="project-body">
+                        <span class="project-category">Web Platform Development</span>
+                        <h3 class="project-name">스터디 신청 웹 플랫폼</h3>
+                        <p class="project-desc">웹사이트 상에서 자유롭게 스터디를 생성하고 간편하게 수강/신청 프로세스를 밟을 수 있는 프로젝트 웹 플랫폼을 전담 개발했습니다.</p>
+                        <span class="project-date" style="font-size: 12px; color: var(--text-muted); margin-bottom: 15px; display: block;"><i data-lucide="calendar" style="width: 12px; height: 12px; vertical-align: middle; margin-right: 4px;"></i>2023.08.01 ~ 2025.08.10</span>
+                        <div class="project-tags">
+                            <span>Web Frontend</span>
+                            <span>JavaScript</span>
+                            <span>UI/UX Design</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/minyook" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Github 링크"><i data-lucide="github"></i> GitHub</a>
+                            <a href="https://app.notion.com/p/Computer-Vision-Engineer-22dada2216e8807680a9fbdc51f67027?source=copy_link" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="노션 링크"><i data-lucide="external-link"></i> Notion</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 프로젝트 2: 대화형 AI 키오스크 -->
+                <div class="project-card reveal-up">
+                    <div class="project-img-box">
+                        <div class="project-img-placeholder">
+                            <i data-lucide="smartphone"></i>
+                        </div>
+                        <div class="project-badge" style="background-color: var(--primary);">최우수상 🏆</div>
+                    </div>
+                    <div class="project-body">
+                        <span class="project-category">Conversational Kiosk App</span>
+                        <h3 class="project-name">‘AI가 달라졌어요’ - 대화형 AI 키오스크</h3>
+                        <p class="project-desc">2024 부산공유대학 해커톤 대회에서 최우수상을 수상한 프로젝트입니다. 대화형 AI 모델을 적용한 지능형 키보드/키오스크 모바일 디바이스 앱을 전담 개발했습니다.</p>
+                        <span class="project-date" style="font-size: 12px; color: var(--text-muted); margin-bottom: 15px; display: block;"><i data-lucide="calendar" style="width: 12px; height: 12px; vertical-align: middle; margin-right: 4px;"></i>2024.11 ~ 2024.12</span>
+                        <div class="project-tags">
+                            <span>Kiosk App</span>
+                            <span>Conversational AI</span>
+                            <span>Kotlin</span>
+                            <span>Hackathon</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/minyook" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Github 링크"><i data-lucide="github"></i> GitHub</a>
+                            <a href="https://app.notion.com/p/Computer-Vision-Engineer-22dada2216e8807680a9fbdc51f67027?source=copy_link" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="노션 링크"><i data-lucide="external-link"></i> Notion</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 프로젝트 3: 실시간 응급실 현황 공유 및 최적 병원 자동 추천 플랫폼 -->
+                <div class="project-card reveal-up">
+                    <div class="project-img-box">
+                        <div class="project-img-placeholder">
+                            <i data-lucide="ambulance"></i>
+                        </div>
+                        <div class="project-badge" style="background-color: var(--secondary); color: var(--bg-base);">우수상 🎖️</div>
+                    </div>
+                    <div class="project-body">
+                        <span class="project-category">Emergency Room Platform</span>
+                        <h3 class="project-name">AI 기반 실시간 응급실 공유 & AI 병원 추천</h3>
+                        <p class="project-desc">2025 동의 AI SW 융합 해커톤 대회 우수상 수상작입니다. 안드로이드 앱 XML 설계, 실시간 위치 서비스 및 유저 정보 관리 서비스 백오피스 연동 개발을 담당했습니다.</p>
+                        <span class="project-date" style="font-size: 12px; color: var(--text-muted); margin-bottom: 15px; display: block;"><i data-lucide="calendar" style="width: 12px; height: 12px; vertical-align: middle; margin-right: 4px;"></i>2025.07.01 ~ 2025.07.10</span>
+                        <div class="project-tags">
+                            <span>Android SDK</span>
+                            <span>XML Design</span>
+                            <span>Location Service</span>
+                            <span>GPS API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/minyook" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Github 링크"><i data-lucide="github"></i> GitHub</a>
+                            <a href="https://app.notion.com/p/Computer-Vision-Engineer-22dada2216e8807680a9fbdc51f67027?source=copy_link" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="노션 링크"><i data-lucide="external-link"></i> Notion</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 프로젝트 4: Overnight.AI 발표 및 스피치 멀티모달 자동 평가 시스템 -->
+                <div class="project-card reveal-up">
+                    <div class="project-img-box">
+                        <div class="project-img-placeholder">
+                            <i data-lucide="brain-circuit"></i>
+                        </div>
+                        <div class="project-badge">AI & LLM Developer</div>
+                    </div>
+                    <div class="project-body">
+                        <span class="project-category">Speech Evaluation System</span>
+                        <h3 class="project-name">🌙 Overnight.AI 멀티모달 스피치 자동 평가</h3>
+                        <p class="project-desc">발표 영상 및 오디오를 복합적으로 연계 분석해 점수를 진단하는 시스템입니다. 시스템 내 대화형 챗봇 개발 및 거대 언어 모델(LLM) 파인튜닝을 전담하여 모델을 구축했습니다.</p>
+                        <span class="project-date" style="font-size: 12px; color: var(--text-muted); margin-bottom: 15px; display: block;"><i data-lucide="calendar" style="width: 12px; height: 12px; vertical-align: middle; margin-right: 4px;"></i>2026.03.02 ~ 2026.06.12</span>
+                        <div class="project-tags">
+                            <span>LLM Fine-Tuning</span>
+                            <span>Chatbot Engine</span>
+                            <span>Multimodal AI</span>
+                            <span>Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/minyook" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Github 링크"><i data-lucide="github"></i> GitHub</a>
+                            <a href="https://app.notion.com/p/Computer-Vision-Engineer-22dada2216e8807680a9fbdc51f67027?source=copy_link" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="노션 링크"><i data-lucide="external-link"></i> Notion</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Skills 섹션 (보유 기술) -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">WHAT I CAN DO</span>
+                <h2 class="section-title">나의 기술 스택</h2>
+            </div>
+            
+            <div class="skills-grid">
+                <!-- 기술 그룹 1 -->
+                <div class="skills-category reveal-left">
+                    <h3><i data-lucide="scan-eye"></i> Computer Vision & AI</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Semantic Segmentation / Object Detection</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--percent: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Deep Learning Framework (PyTorch)</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--percent: 90%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">LLM Fine-Tuning & Prompt Optimization</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--percent: 80%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 기술 그룹 2 -->
+                <div class="skills-category reveal-right">
+                    <h3><i data-lucide="cpu"></i> Sensor Fusion & Systems</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">UWB & 이종 센서 데이터 융합(Sensor Fusion)</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--percent: 80%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Android Application Development (Kotlin)</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--percent: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Git / GitHub & DevOps Collaboration</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--percent: 85%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Awards 섹션 (수상 실적) -->
+    <section class="section awards" id="awards">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">AWARDS & HONORS</span>
+                <h2 class="section-title">수상 실적</h2>
+            </div>
+            
+            <div class="stats-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                <!-- 수상 1: 부산공유대학 해커톤 최우수상 -->
+                <div class="stat-box reveal-up" style="text-align: left; display: flex; align-items: flex-start; gap: 16px;">
+                    <div class="contact-icon-box" style="margin-top: 4px; background-color: var(--primary-glow); color: var(--primary); flex-shrink: 0;"><i data-lucide="trophy"></i></div>
+                    <div>
+                        <span class="timeline-date" style="font-size: 12px; color: var(--secondary); font-weight: 600; display: block; margin-bottom: 4px;">2024.12</span>
+                        <strong style="font-size: 16px; color: var(--text-primary); display: block; margin-bottom: 6px;">2024 부산공유대학 해커톤 대회 최우수상 🏆</strong>
+                        <p style="font-size: 13px; color: var(--text-secondary);">‘AI가 달라졌어요’ 대화형 AI 키오스크 디바이스 앱 전담 개발 공로</p>
+                    </div>
+                </div>
+                
+                <!-- 수상 2: 동의 AI SW 해커톤 우수상 -->
+                <div class="stat-box reveal-up" style="text-align: left; display: flex; align-items: flex-start; gap: 16px; transition-delay: 0.1s;">
+                    <div class="contact-icon-box" style="margin-top: 4px; background-color: var(--primary-glow); color: var(--primary); flex-shrink: 0;"><i data-lucide="trophy"></i></div>
+                    <div>
+                        <span class="timeline-date" style="font-size: 12px; color: var(--secondary); font-weight: 600; display: block; margin-bottom: 4px;">2025.07</span>
+                        <strong style="font-size: 16px; color: var(--text-primary); display: block; margin-bottom: 6px;">2025 동의 AI SW 융합 해커톤 대회 우수상 🎖️</strong>
+                        <p style="font-size: 13px; color: var(--text-secondary);">실시간 응급실 공유 및 AI 병원 추천 플랫폼 앱 설계 및 위치 서비스 구현 기여</p>
+                    </div>
+                </div>
+                
+                <!-- 수상 3: 졸업 작품전 우수상 -->
+                <div class="stat-box reveal-up" style="text-align: left; display: flex; align-items: flex-start; gap: 16px; transition-delay: 0.2s;">
+                    <div class="contact-icon-box" style="margin-top: 4px; background-color: var(--primary-glow); color: var(--primary); flex-shrink: 0;"><i data-lucide="award"></i></div>
+                    <div>
+                        <span class="timeline-date" style="font-size: 12px; color: var(--secondary); font-weight: 600; display: block; margin-bottom: 4px;">2026.08</span>
+                        <strong style="font-size: 16px; color: var(--text-primary); display: block; margin-bottom: 6px;">학부 졸업 작품전 우수상 🎖️</strong>
+                        <p style="font-size: 13px; color: var(--text-secondary);">동의대학교 컴퓨터소프트웨어공학과 학부 졸업작품 우수 개발 선정</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Contact 섹션 (문의 폼) -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">GET IN TOUCH</span>
+                <h2 class="section-title">함께 연구하고 개발하고 싶습니다</h2>
+            </div>
+            
+            <div class="contact-wrapper">
+                <!-- 연락처 상세 안내 -->
+                <div class="contact-info reveal-left">
+                    <p class="contact-text">
+                        센서 융합 인지 시스템, 자율주행 시맨틱 세그먼테이션 공동 연구 및 협업 제안 등 편하게 메시지를 보내주세요.
+                    </p>
+                    
+                    <div class="contact-details-list">
+                        <div class="contact-detail-item">
+                            <div class="contact-icon-box"><i data-lucide="mail"></i></div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>limminyuk0815@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail-item">
+                            <div class="contact-icon-box"><i data-lucide="phone"></i></div>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>010-2470-8336</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail-item">
+                            <div class="contact-icon-box"><i data-lucide="globe"></i></div>
+                            <div>
+                                <h4>Portfolio Links</h4>
+                                <p>GitHub & Notion Preferred</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://github.com/minyook" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Github"><i data-lucide="github"></i></a>
+                        <a href="https://app.notion.com/p/Computer-Vision-Engineer-22dada2216e8807680a9fbdc51f67027?source=copy_link" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Notion"><i data-lucide="external-link"></i></a>
+                        <!-- 인스타그램 링크 연동 자리 (원하시는 인스타그램 URL로 샵(#)을 수정하여 배포하세요) -->
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                        <a href="mailto:limminyuk0815@gmail.com" class="social-btn" aria-label="Email"><i data-lucide="mail"></i></a>
+                    </div>
+                </div>
+
+                <!-- 문의하기 폼 (보안 적용) -->
+                <div class="contact-form-box reveal-right">
+                    <!-- Web3Forms API를 이용해 사용자 실제 메일 주소는 가리고 스팸을 차단하여 전송 -->
+                    <form action="https://api.web3forms.com/submit" method="POST" id="contact-form" class="contact-form">
+                        <!-- 보안용 Access Key 자리 -->
+                        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                        
+                        <!-- 스팸봇 방지용 필드 -->
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                        
+                        <div class="form-group">
+                            <label for="name" class="form-label">이름</label>
+                            <input type="text" name="name" id="name" class="form-input" placeholder="이름을 입력해주세요" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">이메일 주소</label>
+                            <input type="email" name="email" id="email" class="form-input" placeholder="답변을 받으실 이메일을 입력해주세요" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">메시지 내용</label>
+                            <textarea name="message" id="message" class="form-input" rows="5" placeholder="메시지를 입력해주세요" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-submit btn-magnetic" id="submit-btn">
+                            <span>메시지 보내기</span>
+                            <i data-lucide="send"></i>
+                        </button>
+                    </form>
+                    <div id="form-result" class="form-result"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. 하단 푸터 -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p class="copyright">&copy; 2026 Min-yook Lim. All rights reserved.</p>
+            <button class="back-to-top" id="back-to-top" aria-label="맨 위로 이동">
+                <i data-lucide="chevron-up"></i>
+            </button>
+        </div>
+    </footer>
+
+    <!-- JS 스크립트 연결 -->
+    <script src="script.js"></script>
+</body>
+</html>
