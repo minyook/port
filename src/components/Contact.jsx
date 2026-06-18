@@ -69,7 +69,7 @@ export default function Contact() {
           <h2 className="section-title">프로젝트 제안 & 협업 문의</h2>
         </div>
         
-        <div className="contact-wrapper" style={{ display: 'grid', gridTemplateColumns: '0.9fr 1.1fr', gap: '64px', alignItems: 'start' }}>
+        <div className="contact-wrapper">
           
           {/* Left Column: Text Info */}
           <div className="contact-info reveal-left">

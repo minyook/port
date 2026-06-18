@@ -33,7 +33,7 @@ export default function Hero() {
 
   return (
     <section className="section hero" id="hero" style={{ height: 'auto', minHeight: '100vh', display: 'flex', alignItems: 'center', padding: '120px 0 80px 0' }}>
-      <div className="container hero-container" style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '48px', alignItems: 'center', width: '100%' }}>
+      <div className="container hero-container">
         
         {/* Left Column: Title and details */}
         <div className="hero-content">

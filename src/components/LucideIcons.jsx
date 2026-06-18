@@ -20,3 +20,7 @@ export { default as Send } from 'lucide-react/dist/esm/icons/send.mjs';
 export { default as FileText } from 'lucide-react/dist/esm/icons/file-text.mjs';
 export { default as X } from 'lucide-react/dist/esm/icons/x.mjs';
 export { default as Plus } from 'lucide-react/dist/esm/icons/plus.mjs';
+export { default as Briefcase } from 'lucide-react/dist/esm/icons/briefcase.mjs';
+export { default as Users } from 'lucide-react/dist/esm/icons/users.mjs';
+export { default as Sparkles } from 'lucide-react/dist/esm/icons/sparkles.mjs';
+

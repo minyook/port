@@ -64,7 +64,7 @@ export default function Projects() {
       icon: BrainCircuit,
       github: 'https://github.com/minyook',
       notion: 'https://app.notion.com/p/Computer-Vision-Engineer-22dada2216e8807680a9fbdc51f67027?source=copy_link',
-      image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80',
+      image: '/document/overnight_card.png',
       badgeStyle: {}
     }
   ];
