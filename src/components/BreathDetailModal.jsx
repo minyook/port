@@ -52,7 +52,7 @@ export default function BreathDetailModal({ onClose }) {
         <div className="modal-body">
           {/* Main Cover Image */}
           <div className="modal-image-container" style={{ marginBottom: '30px' }}>
-            <img src="/document/breath_img1.png" alt="응급실 프로젝트 메인 커버" className="modal-img" />
+            <img src={`${import.meta.env.BASE_URL}document/breath_img1.png`} alt="응급실 프로젝트 메인 커버" className="modal-img" />
             <p className="modal-img-caption" style={{ textAlign: 'center' }}>
               [그림 1: AI 기반 실시간 응급실 공유 & AI 병원 추천 서비스 메인 시스템 일러스트]
             </p>
@@ -183,7 +183,7 @@ export default function BreathDetailModal({ onClose }) {
           <h3>4. 구현 결과 (Screenshots)</h3>
           <div className="modal-image-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}>
             <div className="modal-image-container">
-              <img src="/document/breath_img2.png" alt="AI 대화형 요청 화면" className="modal-img" />
+              <img src={`${import.meta.env.BASE_URL}document/breath_img2.png`} alt="AI 대화형 요청 화면" className="modal-img" />
               <p className="modal-img-caption">
                 <strong>[그림 2: AI 대화형 요청 화면]</strong><br />
                 음성 인식을 통해 환자 정보를 입력하고, AI와 대화하며 최종적으로 요청을 생성하는 인터페이스
@@ -191,7 +191,7 @@ export default function BreathDetailModal({ onClose }) {
             </div>
             
             <div className="modal-image-container">
-              <img src="/document/breath_img3.png" alt="병원 찾기 및 필터링 화면" className="modal-img" />
+              <img src={`${import.meta.env.BASE_URL}document/breath_img3.png`} alt="병원 찾기 및 필터링 화면" className="modal-img" />
               <p className="modal-img-caption">
                 <strong>[그림 3: 병원 찾기 및 필터링 화면]</strong><br />
                 병원 이름 검색, 진료과 칩(Chip) 필터링, 현재 위치 기준 거리 순 정렬 기능이 구현된 병원 목록
@@ -201,7 +201,7 @@ export default function BreathDetailModal({ onClose }) {
 
           <div className="modal-image-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', marginTop: '20px' }}>
             <div className="modal-image-container">
-              <img src="/document/breath_img4.png" alt="요청 상태 대기 화면" className="modal-img" />
+              <img src={`${import.meta.env.BASE_URL}document/breath_img4.png`} alt="요청 상태 대기 화면" className="modal-img" />
               <p className="modal-img-caption">
                 <strong>[그림 4: 요청 상태 대기 화면]</strong><br />
                 타이머와 실시간 리스너가 동작하며, 요청 취소 및 환자 정보 확인이 가능한 UI
@@ -209,7 +209,7 @@ export default function BreathDetailModal({ onClose }) {
             </div>
             
             <div className="modal-image-container">
-              <img src="/document/breath_img5.png" alt="이송 기록 및 AI 분석 화면" className="modal-img" />
+              <img src={`${import.meta.env.BASE_URL}document/breath_img5.png`} alt="이송 기록 및 AI 분석 화면" className="modal-img" />
               <p className="modal-img-caption">
                 <strong>[그림 5: 이송 기록 및 AI 분석 화면]</strong><br />
                 collectionGroup 쿼리로 조회된 본인의 이송 완료 기록 리스트 및 Gemini를 통한 기록 분석 결과
@@ -221,7 +221,7 @@ export default function BreathDetailModal({ onClose }) {
           <div className="modal-video-container">
             <h4 style={{ marginBottom: '12px' }}>📹 응급실 요청 및 수락 시연 영상</h4>
             <video 
-              src="/document/breath_demo.mp4" 
+              src={`${import.meta.env.BASE_URL}document/breath_demo.mp4`} 
               className="modal-video" 
               controls
             ></video>

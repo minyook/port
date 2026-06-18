@@ -36,7 +36,7 @@ export default function Projects() {
       icon: Smartphone,
       github: 'https://github.com/minyook',
       notion: 'https://app.notion.com/p/Computer-Vision-Engineer-22dada2216e8807680a9fbdc51f67027?source=copy_link',
-      video: '/document/kiosk_opening.mp4',
+      video: `${import.meta.env.BASE_URL}document/kiosk_opening.mp4`,
       badgeStyle: { backgroundColor: 'var(--primary)', color: 'var(--bg-base)' }
     },
     {
@@ -50,7 +50,7 @@ export default function Projects() {
       icon: Ambulance,
       github: 'https://github.com/minyook',
       notion: 'https://app.notion.com/p/Computer-Vision-Engineer-22dada2216e8807680a9fbdc51f67027?source=copy_link',
-      image: '/document/breath_img1.png',
+      image: `${import.meta.env.BASE_URL}document/breath_img1.png`,
       badgeStyle: { backgroundColor: 'var(--secondary)', color: 'var(--bg-base)' }
     },
     {
@@ -64,7 +64,7 @@ export default function Projects() {
       icon: BrainCircuit,
       github: 'https://github.com/minyook',
       notion: 'https://app.notion.com/p/Computer-Vision-Engineer-22dada2216e8807680a9fbdc51f67027?source=copy_link',
-      image: '/document/overnight_card.png',
+      image: `${import.meta.env.BASE_URL}document/overnight_card.png`,
       badgeStyle: {}
     }
   ];

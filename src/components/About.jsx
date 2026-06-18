@@ -20,13 +20,13 @@ export default function About() {
           <div className="about-gallery reveal-left">
             <div className="about-gallery-item-1">
               <img 
-                src="/document/about_vision.png" 
+                src={`${import.meta.env.BASE_URL}document/about_vision.png`} 
                 alt="Autonomous Driving LiDAR & Object Detection" 
               />
             </div>
             <div className="about-gallery-item-2">
               <img 
-                src="/document/about_network.png" 
+                src={`${import.meta.env.BASE_URL}document/about_network.png`} 
                 alt="UWB Smart Tag & Positioning Devices" 
               />
             </div>

@@ -236,7 +236,7 @@ export default function OvernightDetailModal({ onClose }) {
           <h4>4.1. 시스템 구현 화면 및 분석 리포트</h4>
           <div className="modal-image-grid">
             <div className="modal-image-container">
-              <img src="/document/overnight_img_21_15_Im15.jpg" alt="분석 의뢰 및 파일 업로드 화면" className="modal-img" />
+              <img src={`${import.meta.env.BASE_URL}document/overnight_img_21_15_Im15.jpg`} alt="분석 의뢰 및 파일 업로드 화면" className="modal-img" />
               <p className="modal-img-caption">
                 <strong>[화면 1: 분석 의뢰 및 파일 업로드 (Evaluate.tsx)]</strong><br />
                 발표 영상과 PPT 자료를 업로드하고 AI 코칭 페르소나(부드러운 조언자 / 냉철한 전문가)를 선택하여 비동기 분석을 요청하는 대기 화면입니다.
@@ -244,7 +244,7 @@ export default function OvernightDetailModal({ onClose }) {
             </div>
             
             <div className="modal-image-container">
-              <img src="/document/overnight_img_22_16_Im16.jpg" alt="종합 Scorecard 및 상세 채점" className="modal-img" />
+              <img src={`${import.meta.env.BASE_URL}document/overnight_img_22_16_Im16.jpg`} alt="종합 Scorecard 및 상세 채점" className="modal-img" />
               <p className="modal-img-caption">
                 <strong>[화면 2: 종합 Scorecard 및 상세 채점 결과]</strong><br />
                 총점(62/100) 및 내용(Content - 36점), 전달의 안정성(Voice - 23점), 시각적 비언어(Attitude - 3점) 영역별 실시간 세부 채점 지표를 시각화한 대시보드 상단 영역입니다.
@@ -252,7 +252,7 @@ export default function OvernightDetailModal({ onClose }) {
             </div>
 
             <div className="modal-image-container">
-              <img src="/document/overnight_img_22_17_Im17.jpg" alt="발표 영상 다시보기 및 슬라이드 정합" className="modal-img" />
+              <img src={`${import.meta.env.BASE_URL}document/overnight_img_22_17_Im17.jpg`} alt="발표 영상 다시보기 및 슬라이드 정합" className="modal-img" />
               <p className="modal-img-caption">
                 <strong>[화면 3: 발표 영상 다시보기 & 슬라이드 일치도 검증]</strong><br />
                 발표 영상 재생 타임라인과 실시간 비언어 피드백 팁이 연동되며, PPT 이미지와 발표 화면을 비교 분석한 슬라이드 정합률(98.6%)을 보여주는 인터페이스입니다.
@@ -260,7 +260,7 @@ export default function OvernightDetailModal({ onClose }) {
             </div>
 
             <div className="modal-image-container">
-              <img src="/document/overnight_img_25_21_Im20.jpg" alt="AI 전문가 심층 피드백" className="modal-img" />
+              <img src={`${import.meta.env.BASE_URL}document/overnight_img_25_21_Im20.jpg`} alt="AI 전문가 심층 피드백" className="modal-img" />
               <p className="modal-img-caption">
                 <strong>[화면 4: AI 전문가 심층 피드백 리포트]</strong><br />
                 정량 분석 요약(3초 이상 무음 감지 횟수, 필러 워드 수, 시선 응시율 등)과 LoRA로 미세조정된 로컬 Gemma3 기반의 상세 행동 교정 솔루션을 보고서 형태로 가독성 있게 렌더링한 화면입니다.
@@ -268,7 +268,7 @@ export default function OvernightDetailModal({ onClose }) {
             </div>
 
             <div className="modal-image-container">
-              <img src="/document/overnight_img_23_19_Im18.jpg" alt="발표 코칭 전용 AI 챗봇" className="modal-img" />
+              <img src={`${import.meta.env.BASE_URL}document/overnight_img_23_19_Im18.jpg`} alt="발표 코칭 전용 AI 챗봇" className="modal-img" />
               <p className="modal-img-caption">
                 <strong>[화면 5: 발표 코칭 전용 AI 챗봇 (Chatbot.tsx)]</strong><br />
                 사용자가 업로드한 발표 자료(PDF/PPT)를 기반으로 발표 대본(스크립트)을 자동 생성하고 발표 시 주의사항에 대해 AI 멘토와 실시간으로 대화하며 가이드를 얻는 화면입니다.
@@ -276,7 +276,7 @@ export default function OvernightDetailModal({ onClose }) {
             </div>
 
             <div className="modal-image-container">
-              <img src="/document/overnight_img_26_23_Im21.jpg" alt="리포트 내보내기" className="modal-img" />
+              <img src={`${import.meta.env.BASE_URL}document/overnight_img_26_23_Im21.jpg`} alt="리포트 내보내기" className="modal-img" />
               <p className="modal-img-caption">
                 <strong>[화면 6: 리포트 내보내기 및 다운로드]</strong><br />
                 분석 완료된 모든 세부 평가 데이터와 종합 보고서 마크다운을 브라우저상에서 즉시 EXCEL 및 PDF 문서 포맷으로 변환하여 로컬 저장소로 저장하고 아카이빙할 수 있는 리포트 출력 기능입니다.
@@ -357,7 +357,7 @@ export default function OvernightDetailModal({ onClose }) {
             - <strong>안정성 및 모델 이중화:</strong> 외부 Gemini API 호출 장애 시 로컬 Ollama(Gemma3)로 자동 폴백되는 이중화 환경을 구축하여 채점 파이프라인의 비즈니스 신뢰도를 크게 높였습니다.
           </p>
           <div className="modal-image-container" style={{ margin: '20px auto 30px auto', maxWidth: '600px' }}>
-            <img src="/document/overnight_img_27_26_Im22.jpg" alt="현재 구조 vs 개선 구조" className="modal-img" />
+            <img src={`${import.meta.env.BASE_URL}document/overnight_img_27_26_Im22.jpg`} alt="현재 구조 vs 개선 구조" className="modal-img" />
             <p className="modal-img-caption" style={{ textAlign: 'center' }}>
               <strong>[그림 2: 현재 사후 분석 중심 구조와 향후 실시간 코칭 중심 개선 구조 비교도]</strong>
             </p>

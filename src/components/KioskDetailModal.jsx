@@ -57,7 +57,7 @@ export default function KioskDetailModal({ onClose }) {
           <div className="modal-video-container">
             <h4 style={{ marginBottom: '12px' }}>🎬 프로젝트 소개 및 오프닝 영상</h4>
             <video 
-              src="/document/kiosk_opening.mp4" 
+              src={`${import.meta.env.BASE_URL}document/kiosk_opening.mp4`} 
               className="modal-video" 
               controls 
               autoPlay 
@@ -193,7 +193,7 @@ export default function KioskDetailModal({ onClose }) {
           <h3>4. 구현 결과</h3>
           <div className="modal-image-grid">
             <div className="modal-image-container">
-              <img src="/document/kiosk_img1.png" alt="AI 대화형 주문 화면" className="modal-img" />
+              <img src={`${import.meta.env.BASE_URL}document/kiosk_img1.png`} alt="AI 대화형 주문 화면" className="modal-img" />
               <p className="modal-img-caption">
                 <strong>[AI 대화형 주문 및 맞춤형 추천 화면]</strong><br />
                 음성 인식을 통해 "매운 거 못 먹는데 추천해줘"라고 요청하자, AI가 메뉴 정보를 기반으로 '버터 치킨'을 추천하는 인터페이스
@@ -201,7 +201,7 @@ export default function KioskDetailModal({ onClose }) {
             </div>
             
             <div className="modal-image-container">
-              <img src="/document/kiosk_img2.png" alt="실시간 주문 관리 대시보드" className="modal-img" />
+              <img src={`${import.meta.env.BASE_URL}document/kiosk_img2.png`} alt="실시간 주문 관리 대시보드" className="modal-img" />
               <p className="modal-img-caption">
                 <strong>[실시간 주문 관리 대시보드]</strong><br />
                 테이블별 주문 현황이 실시간으로 업데이트되며, '주문접수', '결제요청' 등 상태에 따라 다른 시각적 피드백을 제공하는 관리자 화면
@@ -213,7 +213,7 @@ export default function KioskDetailModal({ onClose }) {
           <div className="modal-video-container">
             <h4 style={{ marginBottom: '12px' }}>📹 실제 매장 시연 및 주문 관제 작동 영상</h4>
             <video 
-              src="/document/kiosk_demo.mp4" 
+              src={`${import.meta.env.BASE_URL}document/kiosk_demo.mp4`} 
               className="modal-video" 
               controls
             ></video>
