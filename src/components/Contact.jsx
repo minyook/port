@@ -22,10 +22,18 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+    if (!accessKey || accessKey === 'YOUR_ACCESS_KEY_HERE') {
+      setStatus('error');
+      setResultMessage('이메일 전송 API Key가 설정되지 않았습니다. .env 파일에 VITE_WEB3FORMS_ACCESS_KEY를 입력해주세요.');
+      return;
+    }
+
     setStatus('submitting');
 
     const formBody = new FormData();
-    formBody.append('access_key', 'YOUR_ACCESS_KEY_HERE'); // Web3Forms Access Key
+    formBody.append('access_key', accessKey); // Web3Forms Access Key
     formBody.append('name', formData.name);
     formBody.append('email', formData.email);
     formBody.append('message', formData.message);
