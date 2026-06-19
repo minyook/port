@@ -88,6 +88,8 @@ body {
     font-family: var(--font-body);
     overflow-x: hidden;
     line-height: 1.6;
+    word-break: keep-all;
+    overflow-wrap: break-word;
     transition: background-color var(--transition-normal), color var(--transition-normal);
 }
 
@@ -444,9 +446,10 @@ html[data-theme="light"] .theme-toggle .icon-sun {
 
 .hero-subtitle {
     font-family: var(--font-heading);
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
     color: var(--secondary);
     margin-bottom: 24px;
     display: inline-block;
@@ -454,11 +457,14 @@ html[data-theme="light"] .theme-toggle .icon-sun {
 
 .hero-title {
     font-family: var(--font-heading);
-    font-size: 56px;
+    font-size: 52px;
     line-height: 1.2;
-    font-weight: 800;
+    font-weight: 700;
     color: var(--text-primary);
+    margin-top: 20px;
     margin-bottom: 24px;
+    word-break: keep-all;
+    overflow-wrap: break-word;
 }
 
 .text-gradient {
@@ -469,10 +475,13 @@ html[data-theme="light"] .theme-toggle .icon-sun {
 }
 
 .hero-desc {
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 1.7;
     color: var(--text-secondary);
-    max-width: 600px;
+    max-width: 580px;
     margin-bottom: 40px;
+    word-break: keep-all;
+    overflow-wrap: break-word;
 }
 
 .hero-btns {

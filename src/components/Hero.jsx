@@ -37,14 +37,14 @@ export default function Hero() {
         
         {/* Left Column: Title and details */}
         <div className="hero-content">
-          <span className="hero-subtitle reveal-up" style={{ letterSpacing: '0.2em', textTransform: 'uppercase', fontSize: '13px', fontWeight: '600' }}>
+          <span className="hero-subtitle reveal-up">
             Computer Vision Engineer
           </span>
-          <h1 className="hero-title reveal-up" style={{ transitionDelay: '0.1s', fontSize: '52px', lineHeight: '1.2', fontWeight: '700', margin: '20px 0 24px 0' }}>
+          <h1 className="hero-title reveal-up" style={{ transitionDelay: '0.1s' }}>
             임민욱 <span style={{ fontWeight: '300' }}>포트폴리오</span><br />
             <span style={{ color: 'var(--primary)' }}>영상 비전</span> 엔지니어
           </h1>
-          <p className="hero-desc reveal-up" style={{ transitionDelay: '0.2s', fontSize: '16px', color: 'var(--text-secondary)', lineHeight: '1.7', marginBottom: '40px', maxWidth: '580px' }}>
+          <p className="hero-desc reveal-up" style={{ transitionDelay: '0.2s' }}>
             동의대학교 컴퓨터소프트웨어공학과 영상 딥러닝 연구실 석사과정생으로, 자율주행의 핵심인 시맨틱 세그먼테이션(Semantic Segmentation) 등 최신 컴퓨터 비전 기술을 깊이 있게 연구하고 있습니다.
           </p>
           <div className="hero-btns reveal-up" style={{ transitionDelay: '0.3s', display: 'flex', gap: '16px' }}>
